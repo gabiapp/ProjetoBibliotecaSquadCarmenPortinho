@@ -6,14 +6,11 @@ class Usuario:
     self.telefone = telefone
     self.nacionalidade = nacionalidade
 
-  #criar usuário
-  #usuario1 = Usuario("Mariana", "4999999999", "Brasileira")
-    
+
 class Exemplar:
   def __init__(self, livro):
     self.livro = livro
     self.status = "Disponível"
-
 
 
 
