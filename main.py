@@ -10,11 +10,17 @@ class Usuario:
   #usuario1 = Usuario("Mariana", "4999999999", "Brasileira")
     
 class Exemplar:
-  def __init__(self, livro)
+  def __init__(self, livro):
     self.livro = livro
     self.status = "Disponível"
 
-    #adicionar exemplares aos livros
-    #exemplar01 = Exemplar("livro01")
+
+
+
+#criar usuário
+#usuario1 = Usuario("Mariana", "4999999999", "Brasileira")
     
-    #livro01.adcionar_exemplar(exemplar01)
+#adicionar exemplares aos livros
+#exemplar01 = Exemplar("livro01")
+    
+#livro01.adcionar_exemplar(exemplar01)
