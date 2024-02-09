@@ -10,7 +10,7 @@ cursor = conexao.cursor()
 
 #cursor.execute('CREATE TABLE historico ( idhistorico INTEGER NOT NULL, idusuario INTEGER NOT NULL, data_emprestimo DATE NOT NULL, idexemplar INTEGER NOT NULL, data_devolucao DATE NOT NULL, quantidade_renovacao INTEGER NOT NULL, PRIMARY KEY (idhistorico), FOREIGN KEY(idusuario) REFERENCES usuario(idusuario), FOREIGN KEY(idexemplar) REFERENCES livro(idexemplar))')
 
-#cursor.execute('DROP TABLE usuario')
+cursor.execute('DROP TABLE usuario')
 
 conexao.commit() 
 conexao.close
