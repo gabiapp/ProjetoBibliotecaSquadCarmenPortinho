@@ -16,7 +16,7 @@ import sqlite3
 conexao = sqlite3.connect('biblioteca.db')
 cursor = conexao.cursor()
 
-'''#Cadastrando livros
+#Cadastrando livros
 def novo_livro(id ,titulo, descricao, id_exemplar, id_autor, id_genero, status, editora):
     cursor.execute('INSERT INTO livros(idlivro ,titulo, descricao, idexemplar, id_autor, id_genero, status, editora) VALUES(?, ?, ?, ?, ?,?,?,?)', (id ,titulo, descricao, id_exemplar, id_autor, id_genero, status, editora))
 
@@ -29,9 +29,9 @@ id_genero = input("Qual genero do livro? ")
 status = input("Qual o Status do livro(disponivel/indisponivel): ")
 editora = input("Qual a editora do livro? ")
 
-novo_livro(id ,titulo, descricao, id_exemplar, id_autor, id_genero, status, editora)'''
+novo_livro(id ,titulo, descricao, id_exemplar, id_autor, id_genero, status, editora)
 
-#Cadastrando usuario
+'''#Cadastrando usuario
 def novo_user(id ,nome, telefone, nacionalidade):
     cursor.execute('INSERT INTO usuario(idusuario ,nome, telefone, nacionalidade) VALUES(?, ?, ?, ?)', (id ,nome, telefone, nacionalidade))
 
@@ -40,7 +40,7 @@ nome = input("Digite o nome do usuario: ")
 telefone = input("Digite seu numero de telefone com DDD: ")
 nacionalidade = input("Digite sua nacionalidade: ")
 
-novo_user(id ,nome, telefone, nacionalidade)
+novo_user(id ,nome, telefone, nacionalidade)'''
 
 conexao.commit() 
 conexao.close
