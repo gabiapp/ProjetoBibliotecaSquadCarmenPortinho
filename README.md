@@ -1,13 +1,13 @@
 ![Capa](./assets/Carmen-Portinho.png)
 
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Índice <a name="retornar-ao-índice"></a>
-- [Exercício Orientação a Objeto em Python](#exercício-orientação-a-objeto-em-python)
-- [Exercício Banco de Dados](#exercício-banco-de-dados)
-- [Organização dos Execícios](#organização-dos-execícios)
+- [Exercício Orientação a Objeto em Python](#poo)
+- [Exercício Banco de Dados](#bd)
+- [Organização dos Execícios](#organizacao)
 - [Integrantes](#integrantes)
 
 
-## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Exercício Orientação a Objeto em Python
+## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Exercício Orientação a Objeto em Python <a name="poo"></a>
 
 ### 📝 Enunciado
 
@@ -26,7 +26,7 @@ O exercício foi realizado no seguinte repositório: [Link](https://github.com/g
 
 [![Retornar ao índice](https://img.shields.io/badge/Retornar%20ao%20%C3%ADndice-Verde%20Escuro?color=%23006400&style=flat&labelColor=%23006400&logo=github)](#retornar-ao-índice)
 
-## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Exercício Banco de Dados
+## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Exercício Banco de Dados <a name="bd"></a>
 
 ### 📝 Enunciado
 
@@ -53,14 +53,15 @@ O exercício foi realizado no seguinte repositório: [Link](https://github.com/g
 
 [![Retornar ao índice](https://img.shields.io/badge/Retornar%20ao%20%C3%ADndice-Verde%20Escuro?color=%23006400&style=flat&labelColor=%23006400&logo=github)](#retornar-ao-índice)
 
-## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Organização dos Execícios
+## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Organização dos Execícios <a name="organizacao"></a>
 
 Os exercícios foram resolvidos em grupo através de chamadas via discord e organizados de acordo com um quadro Kanban no Trello: 
 
 ![trello](./assets/trello-organizacao.png)
 
----
-## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Integrantes
+[![Retornar ao índice](https://img.shields.io/badge/Retornar%20ao%20%C3%ADndice-Verde%20Escuro?color=%23006400&style=flat&labelColor=%23006400&logo=github)](#retornar-ao-índice)
+
+## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Integrantes <a name="integrantes"></a>
 
 <table>
   <tr>
