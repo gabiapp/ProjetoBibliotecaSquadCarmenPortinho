@@ -42,26 +42,36 @@ nacionalidade = input("Digite sua nacionalidade: ")
 
 novo_user(id ,nome, telefone, nacionalidade)'''
 
-
- 
-from datetime import datetime
 from datetime import datetime, timedelta
 
-def emprestar_livro(id_usuario, id_livro):
+# def emprestar_livro(id_usuario, id_livro):
+
+#         data_emprestimo = datetime.now().strftime('%Y-%m-%d')
+#         data_devolucao = (datetime.now() + timedelta(days=30)).strftime('%Y-%m-%d')
+
+#         cursor.execute('UPDATE livros SET status=?, idexemplar=idexemplar-1 WHERE idlivro=?', ('emprestado', id_livro))
+#         cursor.execute('INSERT INTO historico (idusuario, data_emprestimo, idexemplar, data_devolucao, quantidade_renovacao) VALUES (?, ?, ?, ?, 0)', (id_usuario, data_emprestimo, id_livro, data_devolucao))
+#         conexao.commit()
+
+#         print("Livro emprestado com sucesso!")
+
+# id_usuario = int(input("Digite o ID do usuário: "))
+# id_livro_emprestado = int(input("Digite o ID do livro a ser emprestado: "))
+# emprestar_livro(id_usuario, id_livro_emprestado) 
+
+
+def devolver_livro(id_usuario, id_livro):
+
+        data_devolucao = datetime.now().strftime('%Y-%m-%d')
+        cursor.execute('UPDATE livros SET status=?, idexemplar=idexemplar+1 WHERE idlivro=?', ('disponivel', id_livro))
+        cursor.execute('UPDATE historico SET data_devolucao=? WHERE idexemplar=? AND idusuario=? AND data_devolucao IS NULL', (data_devolucao, id_livro, id_usuario))
   
-        data_emprestimo = datetime.now().strftime('%Y-%m-%d')
-        data_devolucao = (datetime.now() + timedelta(days=30)).strftime('%Y-%m-%d')
 
-        cursor.execute('UPDATE livros SET status=?, idexemplar=idexemplar-1 WHERE idlivro=?', ('emprestado', id_livro))
-        cursor.execute('INSERT INTO historico (idusuario, data_emprestimo, idexemplar, data_devolucao, quantidade_renovacao) VALUES (?, ?, ?, ?, 0)', (id_usuario, data_emprestimo, id_livro, data_devolucao))
-        conexao.commit()
+        print("Livro devolvido com sucesso!")
 
-        print("Livro emprestado com sucesso!")
-
-id_usuario = int(input("Digite o ID do usuário: "))
-id_livro_emprestado = int(input("Digite o ID do livro a ser emprestado: "))
-emprestar_livro(id_usuario, id_livro_emprestado)
-
+id_usuario_devolucao = int(input("Digite o ID do usuário: "))
+id_livro_devolvido = int(input("Digite o ID do livro a ser devolvido: "))
+devolver_livro(id_usuario_devolucao, id_livro_devolvido)
 
 
 conexao.commit() 
