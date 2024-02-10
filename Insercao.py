@@ -60,19 +60,29 @@ from datetime import datetime, timedelta
 # emprestar_livro(id_usuario, id_livro_emprestado) 
 
 
-def devolver_livro(id_usuario, id_livro):
+# def devolver_livro(id_usuario, id_livro):
 
-        data_devolucao = datetime.now().strftime('%Y-%m-%d')
-        cursor.execute('UPDATE livros SET status=?, idexemplar=idexemplar+1 WHERE idlivro=?', ('disponivel', id_livro))
-        cursor.execute('UPDATE historico SET data_devolucao=? WHERE idexemplar=? AND idusuario=? AND data_devolucao IS NULL', (data_devolucao, id_livro, id_usuario))
+#         data_devolucao = datetime.now().strftime('%Y-%m-%d')
+#         cursor.execute('UPDATE livros SET status=?, idexemplar=idexemplar+1 WHERE idlivro=?', ('disponivel', id_livro))
+#         cursor.execute('UPDATE historico SET data_devolucao=? WHERE idexemplar=? AND idusuario=? AND data_devolucao IS NULL', (data_devolucao, id_livro, id_usuario))
   
 
-        print("Livro devolvido com sucesso!")
+#         print("Livro devolvido com sucesso!")
 
-id_usuario_devolucao = int(input("Digite o ID do usuário: "))
-id_livro_devolvido = int(input("Digite o ID do livro a ser devolvido: "))
-devolver_livro(id_usuario_devolucao, id_livro_devolvido)
+# id_usuario_devolucao = int(input("Digite o ID do usuário: "))
+# id_livro_devolvido = int(input("Digite o ID do livro a ser devolvido: "))
+# devolver_livro(id_usuario_devolucao, id_livro_devolvido)
 
+def excluir_livro_por_id(id_livro):
+   
+    
+        cursor.execute('DELETE FROM livros WHERE idlivro = ?', (id_livro,))
+        
+        print("Livro excluído com sucesso!")
+
+
+id_livro = int(input("Digite o ID do livro para excluir: "))
+excluir_livro_por_id(id_livro)
 
 conexao.commit() 
 conexao.close
