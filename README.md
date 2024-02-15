@@ -42,6 +42,9 @@ Para modelar o sistema, utilize obrigatoriamente os conceitos de classe, heranç
 4. Atualizações e Exclusões:
 - Escreva consultas SQL para atualizar e excluir registros do banco de dados, por exemplo, para marcar um livro como devolvido ou remover um autor.
 
+
+[![Retornar ao índice](https://img.shields.io/badge/Retornar%20ao%20%C3%ADndice-Verde%20Escuro?color=%23006400&style=flat&labelColor=%23006400&logo=github)](#retornar-ao-índice)
+
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Resolução dos Exercícios <a name="resolucao"></a>
 
 ### 📌 1. Inicializando o projeto
