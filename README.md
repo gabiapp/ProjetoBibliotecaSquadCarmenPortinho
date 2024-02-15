@@ -3,6 +3,7 @@
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Índice <a name="retornar-ao-índice"></a>
 - [Exercício Orientação a Objeto em Python](#poo)
 - [Exercício Banco de Dados](#bd)
+- [Resolução dos Exercícios](#resolucao)
 - [Organização dos Execícios](#organizacao)
 - [Integrantes](#integrantes)
 
@@ -20,9 +21,6 @@
 6. A biblioteca mantém um registro de todos os empréstimos realizados, incluindo detalhes como data de empréstimo, data de devolução e estado do exemplar (por exemplo, emprestado ou devolvido).
 
 Para modelar o sistema, utilize obrigatoriamente os conceitos de classe, herança, propriedade, encapsulamento e classe abstrata.
-
-### 💻 Resolução
-O exercício foi realizado no seguinte repositório: [Link](https://github.com/gabiapp/ProjetoBibliotecaSquadCarmenPortinho/tree/ExerciciosPOO_SquadCarmenPortinho).
 
 [![Retornar ao índice](https://img.shields.io/badge/Retornar%20ao%20%C3%ADndice-Verde%20Escuro?color=%23006400&style=flat&labelColor=%23006400&logo=github)](#retornar-ao-índice)
 
@@ -44,20 +42,49 @@ O exercício foi realizado no seguinte repositório: [Link](https://github.com/g
 4. Atualizações e Exclusões:
 - Escreva consultas SQL para atualizar e excluir registros do banco de dados, por exemplo, para marcar um livro como devolvido ou remover um autor.
 
-### 💻 Resolução
-Diagrama de Entidade e Relacionamento (ER)
+## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Resolução dos Exercícios <a name="resolucao"></a>
+
+### 📌 1. Inicializando o projeto
+Iniciamos o projeto através do Diagrama de Entidade e Relacionamento (ER) desenvolvido via chamada via Discord e com a participação das integrantes.
 
 ![Diagrama](./assets/Diagrama_de_Entidade_e_Relacionamento(ER).png)
 
-O exercício foi realizado no seguinte repositório: [Link](https://github.com/gabiapp/ProjetoBibliotecaSquadCarmenPortinho/tree/ExerciciosBancoDeDados_SquadCarmenPortinho).
+### 📌 2. Dividindo em grupos menores
+Partimos para a resolução dos exercícios separadamente em subgrupos.
+
+Orientação Orientada a Objetos:
+- Alyne
+- Ana Maria
+- Daniele
+- Gabriela
+- Gessyca
+- Livia
+
+O exercício foi iniciado na branch de Programação Orientada a Objetos: [Link](https://github.com/gabiapp/ProjetoBibliotecaSquadCarmenPortinho/tree/ExerciciosPOO_SquadCarmenPortinho).
+
+Banco de Dados:
+- Cibele
+- Laura
+- Renata
+- Thayná
+
+O exercício foi iniciado na branch de Banco de Dados: [Link](https://github.com/gabiapp/ProjetoBibliotecaSquadCarmenPortinho/tree/ExerciciosBancoDeDados_SquadCarmenPortinho).
+
+### 📌 3. Recalculando Rota
+
+Após alguns dias em desenvolvimento, em nossos encontros via Discord vimos a necessidade do projeto passar por uma reestruturação, juntando tudo em um repositório só.
+
+> A versão final pode ser encontrada na branch main, no repositório `ResoluçãodoExercicio`: [Link](https://github.com/gabiapp/ProjetoBibliotecaSquadCarmenPortinho).
 
 [![Retornar ao índice](https://img.shields.io/badge/Retornar%20ao%20%C3%ADndice-Verde%20Escuro?color=%23006400&style=flat&labelColor=%23006400&logo=github)](#retornar-ao-índice)
 
 ## <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg" width="20px;"/> Organização dos Execícios <a name="organizacao"></a>
 
-Os exercícios foram resolvidos em grupo através de chamadas via discord e organizados de acordo com um quadro Kanban no Trello: 
+Os exercícios foram resolvidos em grupo através de chamadas via Discord e organizados de acordo com um quadro Kanban no Trello: 
 
 ![trello](./assets/trello-organizacao.png)
+
+> ⚠️ Algumas das participantes não contribuíram diretamente por meio de commits no repositório, pois optamos por resolver o exercício através de chamadas no Discord. Para facilitar o processo de submissão, permitimos que algumas pessoas realizassem a tarefa em suas próprias máquinas, enquanto as demais contribuíam de forma indireta. É importante ressaltar que TODAS, SEM EXCEÇÃO, PARTICIPARAM ativamente do projeto.
 
 [![Retornar ao índice](https://img.shields.io/badge/Retornar%20ao%20%C3%ADndice-Verde%20Escuro?color=%23006400&style=flat&labelColor=%23006400&logo=github)](#retornar-ao-índice)
 
