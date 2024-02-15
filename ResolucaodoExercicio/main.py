@@ -7,16 +7,30 @@ conexao = sqlite3.connect('biblioteca_poo.db')
 cursor = conexao.cursor()
 
 
-class Usuario:
-  def __init__(self, nome, telefone, nacionalidade):
-      self.id = str(uuid.uuid4())
-      self.nome = nome
-      self.telefone = telefone
-      self.nacionalidade = nacionalidade
+class LivroAbstrato(ABC):
+  @abstractmethod
+  def __init__(self, titulo, autor, editora, genero, qtd_exemplares):
+      self.titulo = titulo
+      self.autor = autor
+      self.editora = editora
+      self.genero = genero
+      self.qtd_exemplares = qtd_exemplares
 
+  @abstractmethod
+  def cadastrar_livro(self, conexao, titulo, autor, editora, genero, qtd_exemplares):
+      pass
 
-class Livro:
+  @abstractmethod
+  def emprestar(self, conexao, titulo, id_usuario, data_emprestimo, data_devolucao):
+      pass
+
+  @abstractmethod
+  def devolver(self, conexao, titulo, data_devolucao):
+      pass
+  
+class Livro(LivroAbstrato):
     def __init__(self, titulo, autor, editora, genero, qtd_exemplares):
+        super().__init__(titulo, autor, editora, genero, qtd_exemplares)
         self.titulo = titulo
         self.autor = autor
         self.editora = editora
@@ -32,28 +46,32 @@ class Livro:
 
    #funcão que realiza empréstimo
     def emprestar(self, titulo, id_usuario, data_emprestimo, data_devolucao):
-        cursor.execute("INSERT INTO emprestimos(titulo, id_usuario, data_emprestimo, data_devolucao)\
-                    VALUES(?, ?, ?, ?)", (titulo, id_usuario, data_emprestimo, data_devolucao))
-        #cursor.execute('UPDATE Livro SET exemplares = exemplares - 1 WHERE id = ?', (id_livro,))
-        conexao.commit()
-        conexao.close()
+      cursor = conexao.cursor()
+      cursor.execute("SELECT qtd_exemplares FROM Livro WHERE titulo = ?", (titulo,))
+      livro = cursor.fetchone()
+
+      if livro is None or livro[0] <= 0:
+          print("Não existem mais exemplares disponíveis, por favor, busque por outro título")
+      else:
+          cursor.execute("INSERT INTO emprestimos(titulo, id_usuario, data_emprestimo, data_devolucao) VALUES(?, ?, ?, ?)", (titulo, id_usuario, data_emprestimo, data_devolucao))
+          cursor.execute('UPDATE Livro SET qtd_exemplares = qtd_exemplares - 1 WHERE titulo = ?', (titulo,))
+          conexao.commit()
+          conexao.close()
 
 
     #função que atualiza data de devolução de empréstimo
     def devolver(self, titulo, data_devolucao):
         cursor.execute("UPDATE emprestimos SET data_devolucao = ? WHERE titulo = ?", (data_devolucao, titulo) )
+        cursor.execute('UPDATE Livro SET qtd_exemplares = qtd_exemplares + 1 WHERE titulo = ?', (titulo,))
         conexao.commit()
         conexao.close()
 
 
 class Biblioteca:
-    def __init__(self):
-        self.livros = []
-        self.emprestimos_realizados = []
 
     def cadastrar_usuario(self, id, nome, nacionalidade, telefone):
         conexao = sqlite3.connect('biblioteca_poo.db')
-        conexao.execute("INSERT INTO Usuario (id, nome, nacionalidade, telefone) VALUES (?,?,?,?)",( id, nome, nacionalidade, telefone))
+        conexao.execute("INSERT INTO Usuario (id, nome, nacionalidade, telefone) VALUES (?,?,?,?)",(id, nome, nacionalidade, telefone))
         conexao.commit()
         conexao.close()
 
@@ -69,7 +87,7 @@ class Biblioteca:
                                         FROM Livro\
                                         INNER JOIN Emprestimos ON Livro.titulo = Emprestimos.titulo\
                                         INNER JOIN Usuario ON Usuario.id = Emprestimos.id_usuario\
-                                        WHERE Emprestimos.data_devolucao IS NULL").fetchall()
+                                        WHERE Emprestimos.data_devolucao IS NOT NULL").fetchall()
         #conexao.execute('UPDATE Livro SET exemplares = exemplares + 1 WHERE id = ?', (id,))
         conexao.close()
         print(result)
@@ -93,7 +111,7 @@ opcao = input("Digite a opção desejada: ")
 
 if opcao == "1":
   print("Ok vamos cadastar um novo user")
-  id = int(input("Qual id do usuario? "))
+  id = str(uuid.uuid4())
   nome = input("Digite seu nome: ")
   nacionalidade = input("Digite sua nacionalidade: ")
   telefone = input("Digite seu telefone: ")
@@ -111,7 +129,7 @@ elif opcao == "2":
 elif opcao == "3":
   print("Ok qual voce quer emprestado")
   titulo = input("Digite o título do livro: ")
-  id_usuario = int(input("Insira o id do usuario: "))
+  id_usuario = input("Insira o id do usuario: ")
   data_emprestimo = input("Digite a data de emprestimo: ")
   data_devolucao = input("Digite a data de devolução: ")
   livro_01.emprestar(titulo, id_usuario, data_emprestimo, data_devolucao)
