@@ -55,7 +55,7 @@ Iniciamos o projeto através do Diagrama de Entidade e Relacionamento (ER) desen
 ### 📌 2. Dividindo em grupos menores
 Partimos para a resolução dos exercícios separadamente em subgrupos.
 
-Orientação Orientada a Objetos:
+`Orientação Orientada a Objetos:`
 - Alyne
 - Ana Maria
 - Daniele
@@ -65,7 +65,7 @@ Orientação Orientada a Objetos:
 
 O exercício foi iniciado na branch de Programação Orientada a Objetos: [Link](https://github.com/gabiapp/ProjetoBibliotecaSquadCarmenPortinho/tree/ExerciciosPOO_SquadCarmenPortinho).
 
-Banco de Dados:
+`Banco de Dados:`
 - Cibele
 - Laura
 - Renata
