@@ -77,6 +77,5 @@ Os exercícios foram resolvidos em grupo através de chamadas via discord e orga
     <td align="center"><a href="https://github.com/liviazeviani"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/66968738?v=4" width="100px;" alt="Imagem Lívia"/><br /><sub><b>Lívia Zeviani</b></sub></a><br /><a href="https://github.com/liviazeviani">👩‍💻</a></td>
     <td align="center"><a href="https://github.com/Renatarafaelaalves"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/141291179?v=4" width="100px;" alt="Imagem Renata"/><br /><sub><b>Renata Rafaela Alves</b></sub></a><br /><a href="https://github.com/Renatarafaelaalves">👩‍💻</a></td>
     <td align="center"><a href="https://github.com/thaynarlt"><img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/75785465?v=4" width="100px;" alt="Imagem Thayna"/><br /><sub><b>Thayná Tolentino</b></sub></a><br /><a href="https://github.com/thaynarlt">👩‍💻</a></td>
-    
   </tr>
 </table>
